@@ -10,6 +10,5 @@ def emotion_detector(text_to_analyse):
     if response.status_code == 200:
         emotion = formatted_response['documentSentiment']['emotion']
     elif response.status_code == 500:
-        label = None
-        score = None
+        emotion = None
     return {'emotion': emotion}
